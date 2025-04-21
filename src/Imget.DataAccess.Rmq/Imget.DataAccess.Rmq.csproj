@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Rebus" Version="8.7.1" />
+		<PackageReference Include="Rebus.Autofac" Version="9.0.0" />
+		<PackageReference Include="Rebus.RabbitMq" Version="9.4.1" />
+		<PackageReference Include="Rebus.Serilog" Version="8.0.0" />
+		<PackageReference Include="Imget.Shared" Version="0.1.0-alpha0017" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Imget.DataAccess\Imget.DataAccess.csproj" />
+	  <ProjectReference Include="..\Imget.Orchestrator\Imget.Orchestrator.csproj" />
+	</ItemGroup>
+
+</Project>

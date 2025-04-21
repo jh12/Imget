@@ -1,0 +1,18 @@
+﻿@page "/tag"
+@rendermode InteractiveWebAssembly
+
+<MudGrid Class="ma-4">
+    <MudItem>
+        <MudImage Src=""></MudImage>
+    </MudItem>
+
+    <MudItem>
+        @foreach (TagSlim tag in _tags)
+        {
+            <p>@tag.Name - @tag.Description</p>
+        }
+    </MudItem>
+    <MudItem>
+        <MudButton Variant="Variant.Filled" OnClick="Create">Create</MudButton>
+    </MudItem>
+</MudGrid>

@@ -1,0 +1,11 @@
+﻿@page "/monitor"
+@rendermode InteractiveWebAssembly
+
+<MudGrid Class="ma-4">
+    @foreach (string url in _imageUrls)
+    {
+        <MudItem Class="md-4">
+            <MudImage Src="@url" Height="250" ObjectFit="ObjectFit.Contain"></MudImage>
+        </MudItem>
+    }
+</MudGrid>
