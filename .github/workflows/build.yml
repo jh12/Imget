@@ -3,6 +3,7 @@ on:
   push:
     branches-ignore:
       - main
+      - develop
       - workflow
 
   pull_request:
@@ -31,7 +32,7 @@ jobs:
         dotnet-version: 9   
     - name: Install dependencies
       run: dotnet restore
-    #- name: Format
-    #  run: dotnet format --verify-no-changes
+    # - name: Format
+    #   run: dotnet format --verify-no-changes
     - name: Build
       run: dotnet build --configuration Release --no-restore --WarnAsError /p:Version=${{ steps.gitversion.outputs.NuGetVersionV2 }}
